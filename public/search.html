@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="theme-color" content="#000000" />
+   <meta name="description" content="Web site created using create-react-app" />
+   <link rel="stylesheet" href="./style.css">
+   <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+   <title>React App</title>
+</head>
+
+<body>
+   <noscript>You need to enable JavaScript to run this app.</noscript>
+   <div id="root"></div>
+   <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+   <div class="wrapper">
+
+      <aside class="side-menu wrapper__element">
+         <div class="logo">
+            <a href="index.html">
+               <img src="img/logo.png" alt="Logo">
+            </a>
+         </div>
+
+         <nav class="menu side-menu__element">
+            <ul class="menu__list">
+               <li class="menu__item">
+                  <a href="./index.html" class="menu__link link">
+                     <svg width="24" height="24" fill="rgba(255, 255, 255, 0.6)" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg" class="menu__item-icon">
+                        <path
+                           d="M14.8319 15.6H9.51823V10.2H6.48182V15.6H1.16815V4.37622L8.00003 0.399994L14.8319 4.3491V15.6Z" />
+                     </svg>
+                     <span>Home</span>
+                  </a>
+               </li>
+               <li class="menu__item menu__item_active">
+                  <a href="./search.html" class="menu__link link">
+                     <svg width="24" height="24" fill="rgba(255, 255, 255, 0.6)" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg" class="menu__item-icon menu__item-icon_active">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M11.7203 11.2774L14.9888 15.1128L14.4219 15.6L11.1445 11.7646C10.0166 12.6208 8.74698 13.0489 7.33563 13.0489C6.47936 13.0489 5.66001 12.8821 4.87759 12.5485C4.09517 12.2148 3.42198 11.766 2.85801 11.2021C2.29404 10.6382 1.84524 9.96496 1.51163 9.18251C1.17801 8.40007 1.01119 7.58073 1.01117 6.72448C1.01115 5.86824 1.17797 5.04889 1.51163 4.26645C1.84529 3.48401 2.29408 2.81081 2.85801 2.24686C3.42193 1.68292 4.09513 1.23412 4.87759 0.900483C5.66006 0.566844 6.47941 0.400024 7.33563 0.400024C8.19185 0.400024 9.01119 0.566844 9.79366 0.900483C10.5761 1.23412 11.2493 1.68292 11.8132 2.24686C12.3772 2.81081 12.826 3.48401 13.1596 4.26645C13.4933 5.04889 13.6601 5.86824 13.6601 6.72448C13.6601 7.60435 13.4888 8.43698 13.1463 9.22238C12.8038 10.0078 12.3285 10.6928 11.7202 11.2774L11.7203 11.2774ZM7.3357 12.3049C8.34547 12.3049 9.27849 12.0554 10.1348 11.5564C10.991 11.0573 11.6687 10.3797 12.1676 9.52348C12.6666 8.66723 12.9161 7.73421 12.9161 6.72441C12.9162 5.71461 12.6667 4.78159 12.1676 3.92535C11.6686 3.0691 10.991 2.39149 10.1348 1.89251C9.27854 1.39352 8.34552 1.14403 7.3357 1.14403C6.32587 1.14403 5.39285 1.39352 4.53663 1.89251C3.68041 2.39149 3.0028 3.0691 2.50379 3.92535C2.00479 4.78159 1.75529 5.71461 1.75532 6.72441C1.75534 7.73421 2.00483 8.66723 2.50379 9.52348C3.00275 10.3797 3.68036 11.0573 4.53663 11.5564C5.3929 12.0554 6.32592 12.3049 7.3357 12.3049Z" />
+                     </svg>
+                     <span>Search</span>
+                  </a>
+               </li>
+               <li class="menu__item">
+                  <a href="#!" class="menu__link link">
+                     <svg width="24" height="24" fill="rgba(255, 255, 255, 0.6)" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg" class="menu__item-icon">
+                        <path
+                           d="M9.17679 0.659882L15.6 15.0852L14.8548 15.4186L8.43153 0.993306L9.17679 0.659882ZM0.400024 15.4088V0.581421H1.22379V15.4088H0.400024ZM5.34249 15.4088V0.581421H6.16626V15.4088H5.34249Z" />
+                     </svg>
+                     <span>Your library</span>
+                  </a>
+               </li>
+            </ul>
+         </nav>
+
+         <div class="playlists">
+            <div class="playlists__btn">
+               <a href="#!" class="playlists__link link">
+                  <div class="playlists__btn-icon-container playlists__btn-icon-container_new">
+                     <svg role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16">
+                        <path d="M14 7H9V2H7v5H2v2h5v5h2V9h5z"></path>
+                        <path fill="none" d="M0 0h16v16H0z"></path>
+                     </svg>
+                  </div>
+                  <span>Create Playlist</span>
+               </a>
+            </div>
+            <div class="playlists__btn">
+               <a href="#!" class="playlists__link link">
+                  <div class="playlists__btn-icon-container playlists__btn-icon-container_fav">
+                     <svg role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16">
+                        <path fill="rgba(255, 255, 255, 0.6)" class="playlists__btn-icon-path_fav"
+                           d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z">
+                        </path>
+                     </svg>
+                  </div>
+                  <span>Liked songs</span>
+               </a>
+            </div>
+         </div>
+      </aside>
+
+      <main class="main wrapper__element">
+         <header class="header main__element">
+            <div class="header__nav-buttons">
+               <div class="header__nav-button">
+                  <svg width="20" height="20" fill="white" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M30.4319 39L8.18359 20L30.4319 1L31.8164 2.61883L11.4639 20L31.8164 37.3812" />
+                  </svg>
+               </div>
+               <div class="header__nav-button">
+                  <svg width="20" height="20" fill="white" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M9.56812 39L8.18359 37.3812L28.5362 20L8.18359 2.61883L9.56812 1L31.8164 20" />
+                  </svg>
+               </div>
+            </div>
+            <div class="header__search">
+               <form action="" class="header__search-form">
+                  <svg role="img" height="24" width="24" class="header__search-icon" aria-hidden="true" viewBox="0 0 24 24">
+                     <path
+                        d="M16.387 16.623A8.47 8.47 0 0019 10.5a8.5 8.5 0 10-8.5 8.5 8.454 8.454 0 005.125-1.73l4.401 5.153.76-.649-4.399-5.151zM10.5 18C6.364 18 3 14.636 3 10.5S6.364 3 10.5 3 18 6.364 18 10.5 14.636 18 10.5 18z">
+                     </path>
+                  </svg>
+                  <input type="search" class="header__search-input" placeholder="Artists, songs, or podcasts">
+                  <svg role="img" height="24" width="24" class="header__search-close-icon" viewBox="0 0 24 24">
+                     <path
+                        d="M3.293 3.293a1 1 0 011.414 0L12 10.586l7.293-7.293a1 1 0 111.414 1.414L13.414 12l7.293 7.293a1 1 0 01-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 01-1.414-1.414L10.586 12 3.293 4.707a1 1 0 010-1.414z">
+                     </path>
+                  </svg>
+               </form>
+            </div>
+            <div class="header__auth-buttons">
+               <a href="#!" class="header__sign-up-button link">Sign Up</a>
+               <a href="#!" class="header__log-in-button link">Log In</a>
+            </div>
+         </header>
+
+         <section class="main__body">
+            <!--Секция, отображающаяся до начала поиска-->
+            <div class="main__before-search">
+               <div class="main__row">
+                  <div class="main__row-header">
+                     <a class="title main__row-link" href="#!">Others</a>
+                  </div>
+                  <div class="main__row-body">
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                  </div>
+               </div>
+               <div class="main__row">
+                  <div class="main__row-body">
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                  </div>
+               </div>
+               <div class="main__row">
+                  <div class="main__row-body">
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_square link">
+                        <div class="main__item-title main__item-title_xl">Title</div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <!--Секция, отображающаяся после начала поиска и нахождения результата-->
+            <div class="main__after-search not-displayed">
+               <div class="main__search-result">
+                  <div class="main__search-result-best">
+                     <div class="main__item-title main__item-title_xl" href="#!">The best result</div>
+                     <a href="#!" class="main__item main__item_rect main__item_rect-xl link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="title main__item-title">Lorem, ipsum dolor.</div>
+                        <div class="main__item-artist">Artist</div>
+                     </a>
+                  </div>
+                  <div class="main__search-result-tracks">
+                     <div class="main__row-header">
+                        <div class="main__item-title main__item-title_xl">Some tracks</div>
+                        <div class="main__btn">All</div>
+                     </div>
+                     <div class="track-list">
+                        <div class="track">
+                           <div class="track__img-container">
+                              <img src="https://source.unsplash.com/random/200x200" alt="Track's image" class="track__img">                           
+                           </div>
+                           <div class="track__info">
+                              <div class="track__song-name">Song name</div>
+                              <div class="track__author-name">Author name</div>
+                           </div>
+                           <div class="track__time">4:12</div>
+                        </div>
+                        <div class="track">
+                           <div class="track__img-container">
+                              <img src="https://source.unsplash.com/random/200x200" alt="Track's image" class="track__img">
+                           </div>
+                           <div class="track__info">
+                              <div class="track__song-name">Song name</div>
+                              <div class="track__author-name">Author name</div>
+                           </div>
+                           <div class="track__time">4:12</div>
+                        </div>
+                        <div class="track">
+                           <div class="track__img-container">
+                              <img src="https://source.unsplash.com/random/200x200" alt="Track's image" class="track__img">
+                           </div>
+                           <div class="track__info">
+                              <div class="track__song-name">Song name</div>
+                              <div class="track__author-name">Author name</div>
+                           </div>
+                           <div class="track__time">4:12</div>
+                        </div>
+                        <div class="track">
+                           <div class="track__img-container">
+                              <img src="https://source.unsplash.com/random/200x200" alt="Track's image" class="track__img">
+                           </div>
+                           <div class="track__info">
+                              <div class="track__song-name">Song name</div>
+                              <div class="track__author-name">Author name</div>
+                           </div>
+                           <div class="track__time">4:12</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="main__row">
+                  <div class="main__row-header">
+                     <a class="title main__row-link" href="#!">Lorem ipsum dolor sit amet.</a>
+                     <div class="main__btn">All</div>
+                  </div>
+                  <div class="main__row-body">
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                  </div>
+               </div>
+               <div class="main__row">
+                  <div class="main__row-header">
+                     <a class="title main__row-link" href="#!">Lorem ipsum dolor sit amet.</a>
+                     <div class="main__btn">All</div>
+                  </div>
+                  <div class="main__row-body">
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                  </div>
+               </div>
+               <div class="main__row">
+                  <div class="main__row-header">
+                     <a class="title main__row-link" href="#!">Lorem ipsum dolor sit amet.</a>
+                     <div class="main__btn">All</div>
+                  </div>
+                  <div class="main__row-body">
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                     <a href="#!" class="main__item main__item_rect link">
+                        <div class="main__item-img-conteiner">
+                           <img src="https://source.unsplash.com/random/200x200" alt="Album's image" class="main__item-img">
+                        </div>
+                        <div class="main__item-title">Title</div>
+                        <div class="main__item-description">Lorem ipsum dolor sit amet.</div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+   </div>
+</body>
+
+</html>
