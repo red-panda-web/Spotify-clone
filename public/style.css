@@ -1,6 +1,3 @@
-/* Обнуление стандартных стилей */
-@import "reset.css";
-
 /* Шрифты */
 @font-face {
   font-family: "Circular Std";
@@ -45,18 +42,13 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
 .wrapper {
-  display: flex;
-  width: 100%;
-  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(225px, 12%) 1fr;
+  grid-template-rows: 64px 100%;
+  height: 100vh;
   overflow: hidden;
-  font-family: "Circular Std";
+  font-family: "Circular Std", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
@@ -65,12 +57,13 @@ body {
 .side-menu {
   display: flex;
   flex-direction: column;
+  padding: 40px 16px 40px 24px;
   background-color: #030303;
 }
 
-.side-menu.wrapper__element {
-  flex-basis: 12%;
-  padding: 40px 16px 40px 24px;
+.side-menu.wrapper__element{
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
 }
 
 .menu.side-menu__element {
@@ -97,6 +90,12 @@ body {
 .link {
   text-decoration: none;
   color: inherit;
+}
+
+.menu__item-icon{
+  fill: rgba(255, 255, 255, 0.6);
+  width: 24px;
+  height: 24px;
 }
 
 .menu__item-icon_active,
@@ -136,8 +135,12 @@ body {
   background: linear-gradient(135deg, #450af5, #c4efd9);
 }
 
-.playlists__btn:hover .playlists__btn-icon-path_fav {
+.playlists__btn:hover .playlists__btn-icon_fav {
   fill: #fff;
+}
+
+.playlists__btn-icon_fav{
+  fill: rgba(255, 255, 255, 0.6);
 }
 
 .main,
@@ -145,24 +148,19 @@ body {
   background: linear-gradient(113.83deg, #121212 0.59%, #121212 99.74%);
 }
 
-.main.wrapper__element {
-  flex-grow: 1;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 3;
+  position: relative;
+  padding: 0 32px;
   width: 100%;
-  height: 64px;
+  height: 100%;
 }
 
-.header.main__element {
-  position: relative;
-  top: 0;
-  left: 0;
-  padding: 0 32px;
+.header.wrapper__element{
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 
 .header__nav-buttons,
@@ -183,12 +181,17 @@ body {
   cursor: pointer;
 }
 
+.header_nav-button-icon{
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+}
+
 .header__sign-up-button,
 .header__log-in-button {
   padding: 8px 34px;
   font-weight: 700;
   letter-spacing: 1.76px;
-  transition: all 33ms cubic-bezier(0.3, 0, 0, 1);
 }
 
 .header__sign-up-button {
@@ -244,6 +247,11 @@ body {
   cursor: pointer;
 }
 
+.main.wrapper__element{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
 .main__body {
   padding: 30px;
   height: 100%;
@@ -270,6 +278,10 @@ body {
   flex-direction: column;
   margin: 24px 0 48px 0;
   row-gap: 24px;
+}
+
+.main__row:first-child{
+  margin-top: 0;
 }
 
 .main__row-header {
@@ -350,8 +362,8 @@ body {
 }
 
 .main__item-img-conteiner {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 175px;
+  max-height: 175px;
 }
 
 .main__item-img {
@@ -386,11 +398,11 @@ body {
 }
 
 .main__search-result-best {
-  flex: 0 0 27%;
+  flex: 0 0 30%;
 }
 
 .main__item-artist {
-  color: white;
+  color: #fff;
 }
 
 .not-displayed {
@@ -443,7 +455,7 @@ body {
   justify-self: end;
 }
 
-@media screen and (max-width: 1124px) {
+@media screen and (max-width: 1280px) {
   .main__item_rect:nth-child(n + 5) {
     display: none;
   }
@@ -452,7 +464,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1600px) {
   .main__item_rect:nth-child(n + 6) {
     display: none;
   }
@@ -461,8 +473,8 @@ body {
   }
 }
 
-@media screen and (max-width: 1800px) {
-  .main__item_square:nth-child(n + 6) {
+@media screen and (max-width: 1920px) {
+  .main__item_square:nth-child(n + 7) {
     display: none;
   }
 }
